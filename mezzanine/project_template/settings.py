@@ -80,6 +80,8 @@
 # mezzanine.conf.defaults as is the case with the above settings.
 USE_SOUTH = True
 
+SITE_TITLE = "JOYOU"
+
 
 ########################
 # MAIN DJANGO SETTINGS #
@@ -234,6 +236,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "vsite.joyou",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",

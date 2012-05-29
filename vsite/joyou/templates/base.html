@@ -1,0 +1,38 @@
+{% load mezzanine_tags i18n %}
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog_post_feed "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url blog_post_feed "atom" %}">
+{% endifinstalled %}</head>
+
+<link rel="stylesheet" href="{{ STATIC_URL }}joyou/css/reset-min.css" />
+<link rel="stylesheet" href="{{ STATIC_URL }}joyou/css/main.css" />
+{% block extra_css %}{% endblock %}
+
+<script src="{{ STATIC_URL }}mezzanine/js/{{ settings.JQUERY_FILENAME }}" type="text/javascript"></script>
+{% block extra_js %}{% endblock %}
+
+{% block extra_head %}{% endblock %}
+
+<body id="{% block body_id %}body{% endblock %}" align="center">
+	<div class="bg-main-top"></div>
+	<div class="container-overlay">
+		<div class="container">
+			<div class="header"></div>
+			<div class="content"></div>
+			<div class="footer"></div>
+		</div>
+	</div>
+	<div class="bg-main-bottom"></div>
+</body>
+
+</html>

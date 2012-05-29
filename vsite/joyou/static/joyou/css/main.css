@@ -1,0 +1,51 @@
+body {
+	color: #404040;
+	font-family: Verdana,Segoe,Tahoma,Verdana,sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.bg-main-top {
+	background: url(img/bg_top.gif);
+	height: 222px;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.bg-main-bottom {
+	background: url(img/bg_bottom.gif);
+	height: 205px;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.container-overlay {
+	background: url(img/bg_shadow.png) repeat-y;
+	position: relative;
+	width: 1024px;
+	margin: -222px auto -205px;
+	z-index: 1;
+	_background: none;
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='http://i3.microsoft.com/investor/shared/templates/master/IRMaster/bg_shadow.png')
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.header {
+	background: url(img/header_bg.png);
+	height: 158px;
+}
+
+.content {
+	height: 1000px;
+}
+
+.footer {
+	background: url(img/footer_bg.png);
+	height: 196px;
+}
