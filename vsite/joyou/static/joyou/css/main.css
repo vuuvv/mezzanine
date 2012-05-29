@@ -28,7 +28,7 @@ body {
 	margin: -222px auto -205px;
 	z-index: 1;
 	_background: none;
-	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='http://i3.microsoft.com/investor/shared/templates/master/IRMaster/bg_shadow.png')
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='/static/joyou/css/img/bg_shadow.png')
 }
 
 .container {
@@ -39,6 +39,12 @@ body {
 .header {
 	background: url(img/header_bg.png);
 	height: 158px;
+	_background: none;
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='/static/joyou/css/img/header_bg.png')
+}
+
+.main-menu {
+	height: 39px;
 }
 
 .content {
