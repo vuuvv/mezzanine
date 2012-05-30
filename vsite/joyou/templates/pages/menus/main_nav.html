@@ -1,0 +1,27 @@
+{% load i18n pages_tags %}
+{% spaceless %}
+
+{% if page_branch_in_navigation %}
+<ul class="sf-menu">
+	{% for page in page_branch %}
+		{% if page.in_navigation %}
+			{% if page.is_primary and forloop.first %}
+			<li class="main-nav-item first{% if on_home %} active{% endif %}">
+				<a href="{% url home %}">{% trans "Home" %}</a>
+			</li>
+			{% endif %}
+			<li class="main-nav-item
+				{% if page.is_current %} active{% endif %}
+				{% if not page.is_primary and forloop.first %} first {% endif %}
+				{% if forloop.last %} last{% endif %}"
+				id="main-nav-{{ page.html_id }}">
+				<a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+				{% page_menu page %}
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+{% endif %}
+
+{% endspaceless %}
+
